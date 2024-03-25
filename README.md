@@ -1,6 +1,6 @@
 # Proyecto LIS2024
 
-_Plataforma de red social educativa juvenil para el comportamiento de recursos digitales, aprendizaje especializado y publicaciones estudiantiles _
+__Plataforma de red social educativa juvenil para el comportamiento de recursos digitales, aprendizaje especializado y publicaciones estudiantiles__
 
 ## Instalación
 
