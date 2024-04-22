@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Dashboard 2.0</title>
+    <title>Descubrir</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
@@ -27,6 +27,7 @@
     </style>
 </head>
 
+<!-- Barras y nav -->
 <body>
     <nav class="card fixed top-0 z-50 w-full bg-[#11CB92] border-[#0A3229]">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -86,6 +87,7 @@
         </div>
     </nav>
 
+    <!-- Opciones de un lado -->
     <aside id="logo-sidebar"
         class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-[#0A3229] border-r border-gray-200 sm:translate-x-0"
         aria-label="Sidebar">
@@ -157,11 +159,63 @@
         </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-700 border-dashed rounded-lg mt-14">
+    <!-- Formulario de búsqueda -->
+    <form id="searchForm" class="mt-16 flex justify-center z-10">
+        <div class="relative">
+            <input type="text" id="searchQuery" name="searchQuery"
+            class="w-64 border p-2 rounded-full pl-10 bg-gray-300" placeholder="Búsqueda"> 
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" alt="Ícono de búsqueda"
+                class="h-6 w-6 text-gray-500">
+        </div>
+            <!-- 1° Cuadrado con esquinas redondeadas -->
+            <div class="absolute top-16 left-1/2 transform -translate-x-1/2 bg-gray-300 p-2 rounded-lg"
+                style="width: 900px; height: 200px;">
+                <!-- Contenedor del usuario con fondo negro -->
+                <div class="bg-black rounded-lg p-4 text-white">
+                    <!-- Usuario 1 -->
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-white" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 12a4 4 0 100-8 4 4 0 000 8z" clip-rule="evenodd" />
+                            <path d="M10 14c2.67 0 8 1.333 8 4v1H2v-1c0-2.667 5.333-4 8-4z" />
+                        </svg>
+                        <span class="text-white font-bold">Usuario</span>
+                    </div>
+                </div>
+
+                <!-- Contenido del primer cuadro -->
+                <div class="p-4 mt-4">
+                    <!-- Contenido aquí -->
+                </div>
+            </div>
+
+            <!-- Segundo cuadro con las mismas características -->
+            <div class="absolute top-72 left-1/2 transform -translate-x-1/2 bg-gray-300 p-2 rounded-lg"
+                style="width: 900px; height: 200px;">
+                <!-- Contenedor del usuario con fondo negro -->
+                <div class="bg-black rounded-lg p-4 text-white">
+                    <!-- Usuario 2 -->
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-white" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 12a4 4 0 100-8 4 4 0 000 8z" clip-rule="evenodd" />
+                            <path d="M10 14c2.67 0 8 1.333 8 4v1H2v-1c0-2.667 5.333-4 8-4z" />
+                        </svg>
+                        <span class="text-white font-bold">Usuario</span>
+                    </div>
+                </div>
+
+                <!-- Contenido del segundo cuadro -->
+                <div class="p-4 mt-4">
+                    <!-- Contenido aquí -->
+                </div>
+            </div>
 
         </div>
-    </div>
+
+
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
