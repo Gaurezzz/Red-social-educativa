@@ -1,17 +1,17 @@
-document.getElementById('crearCuenta').addEventListener('submit', function(event) {
+document.getElementById('login').addEventListener('submit', function(event) {
     event.preventDefault();
   
     const formData = new FormData(this); 
     const jsonData = {}; 
   
     formData.forEach((value, key) => {
-      if(key == 'remember') return;
-      jsonData[key] = value;
+        if(key == 'remember') return;
+        jsonData[key] = value;
     });
 
     console.log(JSON.stringify(jsonData));
   
-    fetch('http://localhost:8000/api/auth/signup', {
+    fetch('http://localhost:8000/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,6 +30,8 @@ document.getElementById('crearCuenta').addEventListener('submit', function(event
     })
     .catch(error => {
       console.error('Error:', error);
+
+      
     });
   });
 

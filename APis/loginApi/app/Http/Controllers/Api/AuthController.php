@@ -57,8 +57,8 @@ class AuthController extends Controller
         $user->save();
 
         return response()->json([
-            "message" => "Usuario registrado correctamente"
-        ], 201);
+            "message"=>"Usuario registrado correctamente"
+        ], 200);
     }
 
     public function logout(Request $request){
