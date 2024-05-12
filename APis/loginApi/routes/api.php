@@ -21,7 +21,10 @@ Route::namespace('Api')->group(function(){
         Route::post('login', 'AuthController@login');
         Route::post('signup', 'AuthController@signup');
         Route::get('google', 'AuthController@redirectToGoogle')->middleware('web');
-    Route::get('google/callback', 'AuthController@handleGoogleCallback')->middleware('web');
+        Route::get('google/callback', 'AuthController@handleGoogleCallback')->middleware('web');
+
+        Route::post('sendVerification', 'EmailController@sendVerificationEmail');
+        Route::post('emailVerified', 'EmailController@verify');
     });
 
     Route::group([
