@@ -12,13 +12,14 @@
         "barryvdh/laravel-cors": "*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^3.0",
-        "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
-        "laravel/framework": "^7.29",
+        "guzzlehttp/guzzle": "^6.5",
+        "laravel/framework": "^7.0",
         "laravel/passport": "9.0",
         "laravel/socialite": "^5.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.5",
-        "lcobucci/jwt": "^3.3.0"
+        "lcobucci/jwt": "^3.3.0",
+        "phpmailer/phpmailer": "^6.9"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

@@ -20,10 +20,20 @@ document.getElementById('login').addEventListener('submit', function(event) {
       body: JSON.stringify(jsonData)
     })
     .then(response => {
-      if (!response.ok) {
-        throw new Error('Error al enviar el formulario');
+      if (response.status === 401) {
+  
+          var error = document.getElementById('error');
+          error.textContent = 'Credenciales incorrectas';
+          document.getElementById("password").value = "";
+          return;
       }
-      return response.json();
+
+      if (jsonData['email_verified_at'] == null){
+        var error = document.getElementById('error');
+          error.textContent = 'El correo electrónico ingresado no está verificado';
+          document.getElementById("password").value = "";
+          return;
+      }
     })
     .then(data => {
       console.log('Respuesta de la API:', data);

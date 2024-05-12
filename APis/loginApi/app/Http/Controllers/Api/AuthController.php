@@ -45,7 +45,8 @@ class AuthController extends Controller
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users',
             'password' => 'required|string|confirmed',
-            'carnet' => 'required|string|unique:users'
+            'carnet' => 'required|string|unique:users',
+            'verification_token' => 'string'
         ]);
 
         $user = new User([
