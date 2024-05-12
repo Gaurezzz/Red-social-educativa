@@ -24,7 +24,8 @@ Route::namespace('Api')->group(function(){
         Route::get('google/callback', 'AuthController@handleGoogleCallback')->middleware('web');
 
         Route::post('sendVerification', 'EmailController@sendVerificationEmail');
-        Route::post('emailVerified', 'EmailController@verify');
+        Route::get('verify/{token}', 'EmailController@verify')->name('email.verify');
+
     });
 
     Route::group([

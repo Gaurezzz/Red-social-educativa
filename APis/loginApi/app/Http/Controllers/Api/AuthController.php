@@ -53,7 +53,8 @@ class AuthController extends Controller
             'name'=>$request->name,
             'email'=>$request->email,
             'carnet'=>$request->carnet,
-            'password'=>bcrypt($request->password)
+            'password'=>bcrypt($request->password),
+            'verification_token'=>'none'
         ]);
         $user->save();
 
