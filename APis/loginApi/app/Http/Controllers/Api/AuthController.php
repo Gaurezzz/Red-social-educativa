@@ -89,14 +89,14 @@ class AuthController extends Controller
             $newUser->name = $user->getName();
             $newUser->email = $user->getEmail();
             $newUser->password = "google";
+            $newUser->carnet = $user->getEmail();
+            $newUser->verification_token = "none";
             $newUser->save();
 
             Auth::login($newUser);
         }
 
-        return response()->json([
-            "message" => "Conexión con Google completada exitosamente",
-            "user" => $user 
-        ], 200);
+        header('Location: http://localhost:8000/usbook/resources/pages/dashboard.html');
+        exit;
     }
 }

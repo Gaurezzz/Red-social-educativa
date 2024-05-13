@@ -5,7 +5,7 @@ document.getElementById('login').addEventListener('submit', function(event) {
   const jsonData = {}; 
 
   formData.forEach((value, key) => {
-      if(key !== 'remember') { // Corregido: Se cambió '==' por '!=='
+      if(key !== 'remember') {
           jsonData[key] = value;
       }
   });
@@ -21,7 +21,7 @@ document.getElementById('login').addEventListener('submit', function(event) {
     body: JSON.stringify(jsonData)
   })
   .then(response => {
-    if (!response.ok) { // Corregido: Verificar si la respuesta es exitosa
+    if (!response.ok) {
         var error = document.getElementById('error');
         error.textContent = 'Credenciales incorrectas';
         document.getElementById("password").value = "";
@@ -34,13 +34,18 @@ document.getElementById('login').addEventListener('submit', function(event) {
     console.log(data['user']['email_verified_at']);
     console.log(typeof(data));
 
-    if (data['user']['email_verified_at'] == null){ // Corregido: Comprobar si 'email_verified_at' es null
+    if (data['user']['email_verified_at'] == null){
       var error = document.getElementById('error');
         error.textContent = 'El correo electrónico ingresado no está verificado';
         document.getElementById("password").value = "";
         return;
     }
-    // Agregar aquí cualquier otra lógica que necesites con los datos recibidos
+    
+    console.log("pasamos");
+    window.location.href = 'dashboard.html';
+
+
+
   })
   .catch(error => {
     console.error('Error:', error);
