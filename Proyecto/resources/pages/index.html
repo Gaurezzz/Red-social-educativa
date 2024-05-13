@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style>
         .card {
             background-color: #b9f2e1;
@@ -57,24 +58,27 @@
                             <div class="flex items-start">
                                 <div class="flex items-center h-5">
                                     <input id="remember" aria-describedby="remember" type="checkbox"
-                                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300"
-                                        required="">
+                                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300">
                                 </div>
                                 <div class="ml-3 text-sm">
                                     <label for="remember" class="text-gray-500">Recordarme</label>
                                 </div>
                             </div>
-                            <a href="#" class="text-sm font-medium text-primary-600 hover:underline">Olvidó su contraseña?</a>
+                            <a href="requestchangepassword.html" class="text-sm font-medium text-primary-600 hover:underline">Olvidó su contraseña?</a>
                         </div>
                         <button type="submit"
                             class="w-full text-white bg-[#11CB92] hover:bg-[#13B080] focus:ring-4 focus:outline-none focus:ring-[#288466] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Iniciar sesión</button>
                             <p class="text-sm font-light text-red-500" id="error">
                             </p>
-                        <p class="text-sm font-light text-gray-500">
-                            Aún no tiene una cuenta? <a href="../pages/signup.html"
+                        <p class="text-sm font-light text-gray-500 text-center">
+                            Aún no tiene una cuenta? <a href="signup.html"
                                 class="font-medium text-[#11CB92] hover:underline">Registrate</a>
                         </p>
+                        <p class="text-sm font-light text-gray-500 text-center">
+                            Tambien puedes iniciar sesión con<a href="http://localhost:8000/api/auth/google" class="font-medium text-[#ed3440] hover:underline text-center"> Google</a>
+                        </p>
                     </form>
+                    <div id="googleSignInButton"></div>
                 </div>
             </div>
         </div>

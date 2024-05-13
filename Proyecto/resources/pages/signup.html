@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style>
         .card {
             background-color: #b9f2e1;
@@ -93,11 +95,15 @@
                             cuenta</button>
                             <p class="text-sm font-light text-red-500" id="error">
                             </p>
-                        <p class="text-sm font-light text-gray-500">
+                        <p class="text-sm font-light text-gray-500 text-center">
                             Ya tienes una cuenta? <a href="index.html" class="font-medium text-[#11CB92] hover:underline">Inicia
                                 sesión</a>
                         </p>
+                        <p class="text-sm font-light text-gray-500 text-center">
+                            Tambien puedes iniciar sesión con <a href="http://localhost:8000/api/auth/google" class="font-medium text-[#ed3440] hover:underline text-center"> Google</a>
+                        </p>
                     </form>
+                    <div id="googleSignInButton"></div>
                 </div>
             </div>
             <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
@@ -107,7 +113,6 @@
             </div>
         </div>
     </div>
-    <script src="../js/crearCuenta.js"></script>
+    <script src="../js/crearCuenta.js"></script>      
 </body>
-
 </html>

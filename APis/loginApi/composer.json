@@ -12,7 +12,6 @@
         "barryvdh/laravel-cors": "*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^3.0",
-        "guzzlehttp/guzzle": "^6.5",
         "laravel/framework": "^7.0",
         "laravel/passport": "9.0",
         "laravel/socialite": "^5.12",
