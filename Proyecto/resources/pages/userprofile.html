@@ -6,36 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Perfil</title>
+    <title>Perfil de Usuario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-
-    <!-- krajee -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css"
-        crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput.min.css" media="all"
-        rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/buffer.min.js"
-        type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/filetype.min.js"
-        type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/piexif.min.js"
-        type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/sortable.min.js"
-        type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/locales/LANG.js"></script>
-    <!-- End Krajen -->
-
-
     <style>
-        .card {
+        nav {
             background-color: #b9f2e1;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%230a3229' fill-opacity='0.4' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
         }
@@ -76,6 +52,49 @@
             display: block;
         }
     </style>
+
+    <style>
+        .node {
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            width: 272px;
+            height: 210px;
+            display: inline-block;
+            border: 1px solid #cddbc8;
+            border-radius: 13px;
+        }
+
+        .node img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .node .tag-title-node {
+            background: #7baa7d6e;
+            padding: 5px;
+            padding-left: 10px;
+            font-weight: bolder;
+            color: #1c3229;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .node:hover {
+            transform: scale(1.2);
+            z-index: 100;
+        }
+
+        .node .style-text-views {
+            color: #1c3229;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <!-- Barras y nav -->
@@ -99,8 +118,7 @@
                     <a href="..//index.html" class="flex ms-2 md:me-24">
                         <img src="../img/0A3229 (1).png" class="h-8 me-3 rounded-lg" alt="LHub Logo" />
                         <span
-                            class="courgette-regular self-center text-2xl font-bold sm:text-2xl whitespace-nowrap text-[#0A3229]">Learning
-                            Hub</span>
+                            class="courgette-regular self-center text-2xl font-bold sm:text-2xl whitespace-nowrap text-[#0A3229]">Usbook</span>
                     </a>
                 </div>
                 <div class="flex items-center">
@@ -212,33 +230,25 @@
         <div class="flex items-center relative">
             <!-- Foto de perfil editable con menú desplegable -->
             <div class="relative">
-                <img id="profile-image" src="https://via.placeholder.com/100" alt="Foto de perfil"
-                    class="w-20 h-20 rounded-full mr-6 cursor-pointer" onclick="toggleDropdown()">
-                <input id="profile-image-upload" type="file" class="hidden-input" accept="image/*"
-                    onchange="uploadProfileImage(event)">
-
-                <!-- Menú desplegable para subir o eliminar -->
-                <div id="dropdown" class="dropdown-menu bg-white rounded-lg shadow-lg p-2">
-                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded-md"
-                        onclick="triggerFileUpload()">Subir nueva foto</button>
-                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded-md"
-                        onclick="deleteProfileImage()">Eliminar foto actual</button>
-                </div>
-
+                <img id="profile-image"
+                    src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTnQdUzzH-mdrRmoNnrCmpUeSLUnX2rrmUT_LcAIEEAQpQZgRmE"
+                    alt="Foto de perfil" class="w-25 h-25 rounded-full mr-6">
             </div>
 
 
 
             <!-- Información del usuario -->
-            <div>
+            <div class="p-8">
                 <h1 class="text-2xl font-bold flex items-center">
                     <img src="https://img.icons8.com/ios/50/user-male-circle.png" alt="Icono de usuario"
                         class="w-6 h-6 mr-2">
-                    Nombre del Usuario
+                    Alejandra Ponce
                 </h1>
-                <p class="text-gray-600">@nombre_usuario</p>
-                <p class="text-gray-600">Correo: usuario@example.com</p>
-                <p class="text-gray-600">Descripción: Descripción corta del perfil.</p>
+                <p class="text-gray-600">@AlePonce</p>
+                <p class="text-gray-600">Correo: aleponce@gmail.com</p>
+                <p class="text-gray-600">Descripción: Apasionada por la vida, en constante búsqueda de nuevas
+                    experiencias y aprendizajes. Amante de la naturaleza, la música y la lectura. Empática y sociable,
+                    siempre dispuesta a conectar con personas genuinas y compartir momentos memorables.</p>
             </div>
         </div>
 
@@ -276,89 +286,166 @@
                 </svg>
                 <div>
                     <h2 class="text-lg font-bold">Nodos creados</h2>
-                    <p class="text-gray-600">89</p>
+                    <p class="text-gray-600">6</p>
                 </div>
             </div>
         </div>
 
-        <!-- Sección de nodos -->
-        <div class="mt-8">
-            <div class="flex justify-between items-center">
-                <h2 class="text-xl font-bold">Nodos creados</h2>
-                <button class="bg-black text-white px-3 py-1 rounded-lg hover:bg-blue-600">Crear Nodo</button>
-            </div>
-            <ul class="mt-4">
-                <li class="flex justify-between items-center p-2 bg-gray-200 rounded-lg mb-2">
-                    <span class="flex items-center">
-                        <!-- Icono de clip -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 mr-2"
-                            onclick="triggerFileUploadForDocs(event)" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 11l8-8a4 4 0 115.656 5.656l-9 9a4 4 0 01-5.656-5.656l7-7" />
-                        </svg>
-                        Nombre del nodo 1
-                    </span>
-                    <button class="text-red-500">Eliminar</button>
-                    <input id="doc-upload" type="file" class="hidden-input" accept=".pdf,.doc,.docx"
-                        style="display: none;" onchange="fileUploaded()">
-                </li>
-                <li class="flex justify-between items-center p-2 bg-gray-200 rounded-lg mb-2">
-                    <span class="flex items-center">
-                        <!-- Icono de clip -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 mr-2"
-                            onclick="triggerFileUploadForDocs(event)" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 11l8-8a4 4 0 115.656 5.656l-9 9a4 4 0 01-5.656-5.656l7-7" />
-                        </svg>
-                        Nombre del nodo 2
-                    </span>
-                    <button class="text-red-500">Eliminar</button>
-                    <input id="doc-upload" type="file" class="hidden-input" accept=".pdf,.doc,.docx"
-                        style="display: none;" onchange="fileUploaded()">
-                </li>
-            </ul>
+        <br>
+
+        <!-- Lista de nodos -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <a class="node rounded-lg" href="nodedetails.html">
+                <div class="tag-title-node">Java</div>
+                <img class="h-auto max-w-full"
+                    src="https://img.europapress.es/fotoweb/fotonoticia_20200712112937_1200.jpg" alt="">
+                <div class="p-5 pl-2 flex" style="margin-top: -50px;">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p class="style-text-views">483</p>
+
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views ml-3" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                    </svg>
+
+                    <p class="style-text-views">125</p>
+                </div>
+            </a>
+            <a class="node rounded-lg" href="nodedetails.html">
+                <div class="tag-title-node">Arduino</div>
+                <img class="h-auto max-w-full"
+                    src="https://photo.minwt.com/img/Content/arduino/arduino-tutorials-1/arduino-tutorials-1_00.jpg"
+                    alt="">
+                <div class="p-5 pl-2 flex" style="margin-top: -50px;">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p class="style-text-views">1852</p>
+
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views ml-3" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                    </svg>
+
+                    <p class="style-text-views">148</p>
+                </div>
+            </a>
+            <a class="node" href="nodedetails.html">
+                <div class="tag-title-node">Ecuaciones Diferenciales</div>
+                <img class="h-auto max-w-full rounded-lg"
+                    src="https://www.educaciontrespuntocero.com/wp-content/uploads/2018/01/webs-para-aprender-matematicas-978x652.jpg"
+                    alt="">
+                <div class="p-5 pl-2 flex" style="margin-top: -50px;">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p class="style-text-views">1593</p>
+
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views ml-3" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                    </svg>
+
+                    <p class="style-text-views">89</p>
+                </div>
+            </a>
+            <a class="node" href="nodedetails.html">
+                <div class="tag-title-node">PHP</div>
+                <img class="h-auto max-w-full rounded-lg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfSCdOqZWlu9x8PGJuxPM9NXg2Cn1Yz6cMd3RTA07rrUChK457XmrOyn4Y_engYfD34qU&usqp=CAU" alt="">
+                <div class="p-5 pl-2 flex" style="margin-top: -50px;">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p class="style-text-views">3125</p>
+
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views ml-3" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                    </svg>
+
+                    <p class="style-text-views">168</p>
+                </div>
+            </a>
+            <a class="node" href="nodedetails.html">
+                <div class="tag-title-node">Inteligencia de Negocios</div>
+                <img class="h-auto max-w-full rounded-lg"
+                    src="https://matrixcpmsolutions.com/wp-content/uploads/2018/07/EL-TOP-10-DE-LAS-TENDENCIAS-EN-BI-02-300x200.png"
+                    alt="">
+                <div class="p-5 pl-2 flex" style="margin-top: -50px;">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p class="style-text-views">128</p>
+
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views ml-3" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                    </svg>
+
+                    <p class="style-text-views">20</p>
+                </div>
+            </a>
+            <a class="node" href="nodedetails.html">
+                <div class="tag-title-node">Contabilidad y Costos</div>
+                <img class="h-auto max-w-full rounded-lg"
+                    src="https://www.lifeder.com/wp-content/uploads/2018/05/costos-de-una-empresa-foto.jpg" alt="">
+                <div class="p-5 pl-2 flex" style="margin-top: -50px;">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <p class="style-text-views">226</p>
+
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white style-text-views ml-3" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                    </svg>
+
+                    <p class="style-text-views">17</p>
+                </div>
+            </a>
         </div>
-
-        <!-- Sección para nueva publicación -->
-        <div class="mt-8">
-            <h2 class="text-xl font-bold flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black-500 mr-2" viewBox="0 0 24 24"
-                    fill="currentColor">
-                    <path
-                        d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-9v5h5l-5-5z" />
-                </svg>
-                Nueva Publicación
-            </h2>
-            <br>
-            <input type="text" id="" aria-label="disabled input" class="block border focus:ring-blue-500 mb-6 p-2.5 rounded-lg text-sm w-full" placeholder="Título">
-            <textarea placeholder="Escribe tu publicación aquí..." class="w-full border rounded-lg p-3"></textarea>
-
-            <div class="file-loading">
-                <input id="input-b1" name="input-b1[]" type="file" class="file" data-browse-on-zone-click="true" multiple data-allowed-file-extensions='["png", "pdf", "jpg"]'>
-            </div>
-
-            <button class="bg-black text-white p-2 rounded-lg mt-4 flex items-center">
-                Publicar
-            </button>
-        </div>
-
 
         <script src="../js/profile.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-
-        <script>
-            $(document).ready(function () {
-                $("#input-b1").fileinput({
-                    showUpload: false,
-                    dropZoneEnabled: false,
-                    maxFileCount: 10,
-                });
-            });
-        </script>
-        <script src="../js/autenticar.js"></script> 
 </body>
 
 </html>

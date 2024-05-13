@@ -32,7 +32,9 @@ class AuthController extends Controller
         
         $token = $user->createToken('Access Token');
 
-        $user->access_token = $token->accessToken;
+        $user->verification_token = $token->accessToken;
+
+        $user->save();
 
         return response()->json([
             "user"=>$user
@@ -64,6 +66,13 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request){
+
+        $request->validate([
+            'verification_token' => 'required|string',
+            'carnet' => 'required|string'
+        ]);
+
+        $credentials = request(['verification_token', 'carnet']);
 
         $request->user()->token()->revoke();
         return response()->json([

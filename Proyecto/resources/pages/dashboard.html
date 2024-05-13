@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Dashboard 2.0</title>
+    <title>Perfil de Usuario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <style>
-        .card {
+        nav {
             background-color: #b9f2e1;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%230a3229' fill-opacity='0.4' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
         }
@@ -25,7 +25,100 @@
             font-style: normal;
         }
     </style>
+    <style>
+        /* Estilo para esconder el campo de entrada de archivo */
+        .hidden-input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        /* Estilo para el menú desplegable */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid gray;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        /* Mostrar el menú cuando está activo */
+        .dropdown-menu.show {
+            display: block;
+        }
+    </style>
+
+    <style>
+        .node {
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            width: 272px;
+            height: 210px;
+            display: inline-block;
+            border: 1px solid #cddbc8;
+            border-radius: 13px;
+        }
+
+        .node img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .node .tag-title-node {
+            background: #7baa7d6e;
+            padding: 5px;
+            padding-left: 10px;
+            font-weight: bolder;
+            color: #1c3229;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .node:hover {
+            transform: scale(1.2);
+            z-index: 100;
+        }
+
+        .style-text-views {
+            color: #1c3229;
+            font-weight: bold;
+        }
+
+        .post {
+            background-color: #e7e7e7;
+        }
+
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* Aspect ratio 16:9 */
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
+
+<!-- Barras y nav -->
 
 <body>
     <nav class="card fixed top-0 z-50 w-full bg-[#11CB92] border-[#0A3229]">
@@ -44,8 +137,7 @@
                         </svg>
                     </button>
                     <a href="..//index.html" class="flex ms-2 md:me-24">
-                        <img src="../img/0A3229 (1).png" class="h-8 me-3 rounded-lg"
-                            alt="LHub Logo" />
+                        <img src="../img/0A3229 (1).png" class="h-8 me-3 rounded-lg" alt="LHub Logo" />
                         <span
                             class="courgette-regular self-center text-2xl font-bold sm:text-2xl whitespace-nowrap text-[#0A3229]">Usbook</span>
                     </a>
@@ -57,9 +149,7 @@
                                 class="flex text-sm bg-[#0A3229] rounded-full focus:ring-4 focus:ring-[#288466]"
                                 aria-expanded="false" data-dropdown-toggle="dropdown-user">
                                 <span class="sr-only">Open user menu</span>
-                                <img class="w-8 h-8 rounded-full"
-                                    src="../img/user (2).png"
-                                    alt="user photo">
+                                <img class="w-8 h-8 rounded-full" src="../img/user (2).png" alt="user photo">
                             </button>
                         </div>
                         <div class="z-50 hidden my-4 text-base list-none bg-[#0A3229] divide-y divide-gray-100 rounded shadow"
@@ -76,7 +166,7 @@
                                 <li>
                                     <a href="#"
                                         class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1B5B44] hover:text-white"
-                                        role="menuitem">Cerrar sesión</a>
+                                        role="menuitem" id="logoutBtn">Cerrar sesión</a>
                                 </li>
                             </ul>
                         </div>
@@ -86,6 +176,7 @@
         </div>
     </nav>
 
+    <!-- Opciones de un lado -->
     <aside id="logo-sidebar"
         class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-[#0A3229] border-r border-gray-200 sm:translate-x-0"
         aria-label="Sidebar">
@@ -94,9 +185,8 @@
                 <li>
                     <a href="dashboard.html"
                         class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-[#1B5B44] group">
-                        <svg class="w-6 h-6 text-white" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd"
                                 d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
                                 clip-rule="evenodd" />
@@ -116,8 +206,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                        class="flex items-center p-2 text-white rounded-lg hover:bg-[#1B5B44] group">
+                    <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-[#1B5B44] group">
                         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd"
@@ -132,8 +221,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                        class="flex items-center p-2 text-white rounded-lg hover:bg-[#1B5B44] group">
+                    <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-[#1B5B44] group">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -143,8 +231,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="profile.html"
-                        class="flex items-center p-2 text-white rounded-lg hover:bg-[#1B5B44] group">
+                    <a href="profile.html" class="flex items-center p-2 text-white rounded-lg hover:bg-[#1B5B44] group">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                             <path fill-rule="evenodd"
                                 d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
@@ -157,12 +244,197 @@
         </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-700 border-dashed rounded-lg mt-14">
+    <!-- Contenedor principal -->
+    <div class="max-w-screen-md mx-auto bg-white rounded-lg shadow-lg p-6 pt-20">
+
+
+        <!-- Post1 -->
+        <div class="post w-full border border-gray-200 rounded-lg shadow mb-6">
+            <div class="rounded-lg p-4">
+                <!-- Usuario 1 -->
+                <a class="flex items-center" href="userprofile.html">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTnQdUzzH-mdrRmoNnrCmpUeSLUnX2rrmUT_LcAIEEAQpQZgRmE"
+                        style="border-radius: 50%;width: 40px;margin-right: 10px;">
+                    <div style="display: inline-block;">
+                        <span class="font-bold">Alejandra Ponce</span>
+                        <br>
+                        <span class="text-gray-600 mr-4">@AlePonce</span>
+                        <span class="text-gray-600">Hace 2 horas</span>
+                    </div>
+                </a>
+            </div>
+            <div class="px-5">
+                <h6 class="text-xl font-semibold tracking-tight text-gray-900">💥 Impacto de la Ciencia de
+                    Datos 💪💻</h6>
+            </div>
+            <a href="#">
+                <img class="p-5 rounded-t-lg" src="https://innovus.press/wp-content/uploads/2023/01/ciencia_datos.jpg"
+                    alt="product image" />
+            </a>
+            <div class="px-5 pb-5 tracking-tight text-gray-900">
+                <p class="mb-2">En un mundo cada vez más impulsado por la información, la Ciencia de Datos se ha
+                    convertido en una
+                    herramienta fundamental en una amplia gama de industrias, desde la medicina hasta el comercio
+                    electrónico y más allá.</p>
+
+
+                <p class="mb-2">Aquí hay algunas razones por las que la Ciencia de Datos es tan emocionante:</p>
+
+                <ul class="list-disc list-inside pl-5">
+                    <li>Descubrimiento de Patrones: La Ciencia de Datos nos permite encontrar patrones ocultos en
+                        grandes conjuntos de datos que de otro modo serían difíciles de detectar.</li>
+                    <li>Predicciones Precisas: Al analizar datos históricos, podemos desarrollar modelos predictivos que
+                        nos ayudan a anticipar eventos futuros con mayor precisión.</li>
+                    <li>Toma de Decisiones Informadas: Con acceso a datos relevantes y herramientas analíticas
+                        adecuadas, las organizaciones pueden tomar decisiones estratégicas fundamentadas en evidencia.
+                    </li>
+                    <li>Innovación Constante: La Ciencia de Datos está en constante evolución, con nuevas técnicas y
+                        tecnologías emergiendo para abordar desafíos complejos y resolver problemas de manera más
+                        eficiente.</li>
+                </ul>
+
+                <p>#Datos #CienciaDeDatos #Python</p>
+            </div>
+            <div class="postlike flex mb-2 cursor-pointer" id="post1" onclick="like('post1');">
+                <svg class="postlikeicon w-6 h-6 text-gray-800 style-text-views ml-3" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                </svg>
+
+                <p class="postlikenumber style-text-views">168</p>
+            </div>
+        </div>
+
+        <!-- Post2 -->
+        <div class="post w-full border border-gray-200 rounded-lg shadow mb-6">
+            <div class="rounded-lg p-4">
+                <!-- Usuario 1 -->
+                <div class="flex items-center">
+                    <img src="https://us.123rf.com/450wm/yupiramos/yupiramos1801/yupiramos180103130/93260021-joven-personaje-de-avatar-feliz-dise%C3%B1o-de-ilustraci%C3%B3n-vectorial.jpg?ver=6"
+                        style="border-radius: 50%;width: 40px;margin-right: 10px;">
+                    <div style="display: inline-block;">
+                        <span class="font-bold">Filiberto Castro</span>
+                        <br>
+                        <span class="text-gray-600 mr-4">@FiliCo</span>
+                        <span class="text-gray-600">Hace 16 horas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-5">
+                <h6 class="text-xl font-semibold tracking-tight text-gray-900">
+                    🌟 ¡Explora el fascinante mundo de PHP! 🌟</h6>
+            </div>
+            <a href="#">
+                <img class="p-5 rounded-t-lg" src="https://img-c.udemycdn.com/course/750x422/4994252_6808_2.jpg"
+                    alt="product image" />
+            </a>
+            <div class="px-5 pb-5 tracking-tight text-gray-900">
+                <h1 class="mb-2">¿Quieres convertirte en un maestro del desarrollo web?</h1>
+                <p class="mb-2">¡Entonces PHP es tu herramienta clave!</p>
+                <p>PHP es un lenguaje de programación increíblemente poderoso y versátil que te permite crear sitios web
+                    dinámicos y funcionales. Desde la gestión de bases de datos hasta la creación de formularios
+                    interactivos, ¡las posibilidades son infinitas con PHP!</p>
+                <p>¿Por qué aprender PHP? Aquí hay algunas razones convincentes:</p>
+                <ul class="list-disc list-inside pl-5">
+                    <li><strong>Amplia demanda laboral:</strong> Las habilidades en PHP son altamente valoradas por
+                        empleadores de todo el mundo.</li>
+                    <li><strong>Comunidad activa:</strong> Únete a una comunidad global de desarrolladores apasionados
+                        que comparten conocimientos y recursos.</li>
+                    <li><strong>Flexibilidad:</strong> PHP se integra fácilmente con HTML, CSS, JavaScript y otras
+                        tecnologías web.</li>
+                    <li><strong>Proyectos emocionantes:</strong> Desde aplicaciones web simples hasta plataformas de
+                        comercio electrónico complejas, PHP te brinda las herramientas para construir tus ideas.</li>
+                </ul>
+                <p>¿Listo para sumergirte en el emocionante mundo de PHP? ¡No esperes más y comienza tu viaje hoy mismo!
+                </p>
+                <p>#PHP #DesarrolloWeb #Programación #AprendePHP</p>
+            </div>
+            <div class="postlike flex mb-2 cursor-pointer" id="post2" onclick="like('post2');">
+                <svg class="postlikeicon w-6 h-6 text-gray-800 style-text-views ml-3" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                </svg>
+
+                <p class="postlikenumber style-text-views">50</p>
+            </div>
 
         </div>
+
+        <!-- Post3 -->
+        <div class="post w-full border border-gray-200 rounded-lg shadow mb-6">
+            <div class="rounded-lg p-4">
+                <!-- Usuario 1 -->
+                <div class="flex items-center">
+                    <img src="https://www.svgrepo.com/show/382095/female-avatar-girl-face-woman-user-4.svg"
+                        style="border-radius: 50%;width: 40px;margin-right: 10px;">
+                    <div style="display: inline-block;">
+                        <span class="font-bold">Lourdez Quintanilla</span>
+                        <br>
+                        <span class="text-gray-600 mr-4">@LouTanilla</span>
+                        <span class="text-gray-600">Hace 2 días</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-5">
+                <h6 class="text-xl font-semibold tracking-tight text-gray-900">
+                    📚 ¡Explorando el fascinante mundo de las Ecuaciones Diferenciales! 📐</h6>
+            </div>
+            <div class="iframe-container">
+                <iframe class="p-5 rounded-t-lg" width="auto" height="auto"
+                    src="https://www.youtube.com/embed/4HFN0NWBvAk?list=PLC6o1uTspYwGJGlFnQ4QGLGBNtrdZ8AIt"
+                    title="EC. DIF. POR VARIABLES SEPARABLES - Ejercicio 1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="px-5 pb-5 tracking-tight text-gray-900">
+                ¿Alguna vez te has preguntado cómo se modelan fenómenos de la vida real usando matemáticas? ¡Las
+                ecuaciones diferenciales son la clave! 🔍 Desde la física hasta la economía, pasando por la biología y
+                la ingeniería, estas ecuaciones nos permiten entender y predecir el cambio en sistemas dinámicos.
+
+                En esta publicación, queremos invitarte a sumergirte en este apasionante campo. Descubre cómo se
+                utilizan las ecuaciones diferenciales para describir el crecimiento de poblaciones, el movimiento de los
+                cuerpos, el comportamiento de los circuitos eléctricos y mucho más. 💡
+
+                #Matemáticas #EcuacionesDiferenciales #Ciencia
+            </div>
+            <div class="postlike flex mb-2 cursor-pointer" id="post3" onclick="like('post3');">
+                <svg class="postlikeicon w-6 h-6 text-gray-800 style-text-views ml-3" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                </svg>
+
+                <p class="postlikenumber style-text-views">120</p>
+            </div>
+
+        </div>
+
+
     </div>
+
+    <script src="../js/profile.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+
+    <script>
+        function like(npost) {
+            var postlikeicon = document.querySelector("#" + npost + " .postlikeicon");
+            var postlikenumber = document.querySelector("#" + npost + " .postlikenumber");
+
+            if (postlikeicon.classList.contains("text-red-500")) {
+                postlikeicon.classList.remove("text-red-500");
+                var n = parseInt(postlikenumber.textContent) - 1;
+                postlikenumber.textContent = n;
+            } else {
+                postlikeicon.classList.add("text-red-500");
+                var n = parseInt(postlikenumber.textContent) + 1;
+                postlikenumber.textContent = n;
+            }
+        }
+    </script>
+    <script src="../js/autenticar.js"></script> 
 </body>
 
 </html>

@@ -42,9 +42,11 @@ document.getElementById('login').addEventListener('submit', function(event) {
     }
     
     console.log("pasamos");
+
+    localStorage.setItem('verification_token', data['user']['verification_token']);
+    localStorage.setItem('carnet', data['user']['carnet']);
+
     window.location.href = 'dashboard.html';
-
-
 
   })
   .catch(error => {

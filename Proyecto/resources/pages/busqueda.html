@@ -77,7 +77,7 @@
                                 <li>
                                     <a href="#"
                                         class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#1B5B44] hover:text-white"
-                                        role="menuitem">Cerrar sesión</a>
+                                        role="menuitem" id="logoutBtn">Cerrar sesión</a>
                                 </li>
                             </ul>
                         </div>
@@ -160,63 +160,48 @@
     </aside>
 
     <!-- Formulario de búsqueda -->
-    <form id="searchForm" class="mt-16 flex justify-center z-10">
+    <form id="searchForm" class="mt-16 flex justify-center z-10 cursor-pointer" onclick="GoUser()">
         <div class="relative">
             <input type="text" id="searchQuery" name="searchQuery"
-            class="w-64 border p-2 rounded-full pl-10 bg-gray-300" placeholder="Búsqueda"> 
+            class="w-64 border p-2 rounded-full pl-10 bg-gray-300" placeholder="Búsqueda" value="Ale"> 
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" alt="Ícono de búsqueda"
                 class="h-6 w-6 text-gray-500">
         </div>
             <!-- 1° Cuadrado con esquinas redondeadas -->
             <div class="absolute top-16 left-1/2 transform -translate-x-1/2 bg-gray-300 p-2 rounded-lg"
-                style="width: 900px; height: 200px;">
+                style="width: 900px;">
                 <!-- Contenedor del usuario con fondo negro -->
                 <div class="bg-black rounded-lg p-4 text-white">
                     <!-- Usuario 1 -->
                     <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-white" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 12a4 4 0 100-8 4 4 0 000 8z" clip-rule="evenodd" />
-                            <path d="M10 14c2.67 0 8 1.333 8 4v1H2v-1c0-2.667 5.333-4 8-4z" />
-                        </svg>
-                        <span class="text-white font-bold">Usuario</span>
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTnQdUzzH-mdrRmoNnrCmpUeSLUnX2rrmUT_LcAIEEAQpQZgRmE" style="border-radius: 50%;width: 40px;margin-right: 10px;">
+                        <div style="display: inline-block;">
+                            <span class="text-white font-bold">Alejandra Ponce</span>
+                            <br>
+                            <span class="text-gray-300">@AlePonce</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Contenido del primer cuadro -->
-                <div class="p-4 mt-4">
-                    <!-- Contenido aquí -->
-                </div>
-            </div>
-
-            <!-- Segundo cuadro con las mismas características -->
-            <div class="absolute top-72 left-1/2 transform -translate-x-1/2 bg-gray-300 p-2 rounded-lg"
-                style="width: 900px; height: 200px;">
-                <!-- Contenedor del usuario con fondo negro -->
-                <div class="bg-black rounded-lg p-4 text-white">
-                    <!-- Usuario 2 -->
-                    <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-white" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 12a4 4 0 100-8 4 4 0 000 8z" clip-rule="evenodd" />
-                            <path d="M10 14c2.67 0 8 1.333 8 4v1H2v-1c0-2.667 5.333-4 8-4z" />
-                        </svg>
-                        <span class="text-white font-bold">Usuario</span>
-                    </div>
-                </div>
-
-                <!-- Contenido del segundo cuadro -->
-                <div class="p-4 mt-4">
+                <div class="">
                     <!-- Contenido aquí -->
                 </div>
             </div>
 
         </div>
 
-
+    </form>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script>
+        function GoUser(){
+            location.href="userprofile.html"
+        }
+    </script>
+    <script src="../js/autenticar.js"></script> 
 </body>
 
 </html>
