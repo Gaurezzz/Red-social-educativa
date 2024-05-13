@@ -27,7 +27,9 @@ Route::namespace('Api')->group(function(){
         Route::post('changePassword', 'EmailController@changePassword');
         Route::post('newPassword', 'EmailController@newPassword');
         Route::get('verify/{token}', 'EmailController@verify')->name('email.verify');
-
+        
+        
+        Route::post('check', 'SessionController@check');
     });
 
     Route::group([
